@@ -81,8 +81,9 @@ class STRIP_OT_add_custom_annotation(bpy.types.Operator):
 
     def draw(self, context):
         layout = self.layout
-        prop = layout.prop(self, "annot_text")
-        prop.activate_init = True
+        row = layout.row()
+        row.activate_init = True
+        prop = row.prop(self, "annot_text")
 
 
 class STRIP_OT_edit_custom_annotation(bpy.types.Operator):
@@ -113,9 +114,9 @@ class STRIP_OT_edit_custom_annotation(bpy.types.Operator):
 
     def draw(self, context):
         layout = self.layout
-
-        prop = layout.prop(self, "new_annot_text")
-        prop.activate_init = True
+        row = layout.row()
+        row.activate_init = True
+        prop = row.prop(self, "new_annot_text")
 
 
 class STRIP_OT_remove_custom_annotation(bpy.types.Operator):
