@@ -11,7 +11,7 @@ bl_info = {
 }
 
 import bpy
-from add_custom_strip_annotations import *
+from custom_strip_annotations.add_custom_strip_annotations import *
 
 
 classes = [
